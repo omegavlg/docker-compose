@@ -44,3 +44,49 @@ systemctl enable --now docker
 docker pull nginx:1.21.1
 ```
 <img src = "img/02.png" width = 100%>
+
+Создадим файл Dockerfile с содержимым:
+```
+FROM nginx:1.21.1
+COPY index.html /usr/share/nginx/html/index.html
+```
+
+Создадим файл index.html с вашим содержимым:
+```
+<html>
+<head>
+Hey, Netology
+</head>
+<body>
+<h1>I will be DevOps Engineer!</h1>
+</body>
+</html>
+```
+
+В директории, где находятся Dockerfile и index.html, выполним команду:
+```
+docker build -t custom-nginx:1.0.0 .
+```
+<img src = "img/03.png" width = 100%>
+```
+[root@netology-docker-compose netology]# docker build -t custom-nginx:1.0.0 .
+[+] Building 0.9s (7/7) FINISHED                                                                                                                                                                                       docker:default
+ => [internal] load build definition from Dockerfile                                                                                                                                                                             0.1s
+ => => transferring dockerfile: 157B                                                                                                                                                                                             0.0s
+ => [internal] load metadata for docker.io/library/nginx:1.21.1                                                                                                                                                                  0.0s
+ => [internal] load .dockerignore                                                                                                                                                                                                0.0s
+ => => transferring context: 2B                                                                                                                                                                                                  0.0s
+ => [internal] load build context                                                                                                                                                                                                0.2s
+ => => transferring context: 186B                                                                                                                                                                                                0.0s
+ => [1/2] FROM docker.io/library/nginx:1.21.1                                                                                                                                                                                    0.4s
+ => [2/2] COPY index.html /usr/share/nginx/html/index.html                                                                                                                                                                       0.1s
+ => exporting to image                                                                                                                                                                                                           0.1s
+ => => exporting layers                                                                                                                                                                                                          0.0s
+ => => writing image sha256:1ca9446cd5b74b88bc19771d76775a1180dca00c7e109fe4bcc6062a926370c0                                                                                                                                     0.0s
+ => => naming to docker.io/library/custom-nginx:1.0.0                                                                                                                                                                            0.0s
+[root@netology-docker-compose netology]#
+```
+
+
+
+
