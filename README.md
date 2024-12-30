@@ -68,6 +68,7 @@ Hey, Netology
 docker build -t custom-nginx:1.0.0 .
 ```
 <img src = "img/03.png" width = 100%>
+
 ```
 [root@netology-docker-compose netology]# docker build -t custom-nginx:1.0.0 .
 [+] Building 0.9s (7/7) FINISHED                                                                                                                                                                                       docker:default
