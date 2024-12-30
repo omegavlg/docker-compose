@@ -88,6 +88,21 @@ docker build -t custom-nginx:1.0.0 .
 [root@netology-docker-compose netology]#
 ```
 
+Авторизуемся в Docker Hub, чтобы загрузить образ в созданный репозиторий командой:
+```
+docker login
+```
+<img src = "img/04.png" width = 100%>
 
+Тегируем образ и отправляем в репозиторий:
+```
+docker tag custom-nginx:1.0.0 omegavlg/custom-nginx:1.0.0
+```
+```
+docker push omegavlg/custom-nginx:1.0.0
+```
+<img src = "img/05.png" width = 100%>
 
+Ссылка на образ в Docker Hub:
+https://hub.docker.com/repository/docker/omegavlg/custom-nginx/general
 
