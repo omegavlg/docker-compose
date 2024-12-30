@@ -189,6 +189,16 @@ curl http://127.0.0.1:81
 ```
 <img src = "img/12.png" width = 100%>
 
+Выходим из контейнера и выполняем команды:
+```
+ss -tlpn | grep 127.0.0.1:8080
+```
+```
+docker port custom-nginx-t2
+```
+```
+curl http://127.0.0.1:8080
+```
 <img src = "img/13.png" width = 100%>
 
 
