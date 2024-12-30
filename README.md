@@ -106,3 +106,19 @@ https://hub.docker.com/repository/docker/omegavlg/custom-nginx/general
 
 ### Ответ:
 
+Выполняем команды задания:
+```
+docker run -d --name dedyurindn-custom-nginx-t2 -p 127.0.0.1:8080:80 custom-nginx:1.0.0
+```
+```
+docker rename dedyurindn-custom-nginx-t2 custom-nginx-t2
+```
+```
+date +"%d-%m-%Y %T.%N %Z" ; sleep 0.150 ; docker ps ; ss -tlpn | grep 127.0.0.1:8080  ; docker logs custom-nginx-t2 -n1 ; docker exec -it custom-nginx-t2 base64 /usr/share/nginx/html/index.html
+```
+```
+curl http://127.0.0.1:8080
+```
+<img src = "img/06.png" width = 100%>
+
+
