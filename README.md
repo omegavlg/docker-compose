@@ -250,7 +250,7 @@ cat /data/file1.txt
 cat /data/file2.txt
 exit
 ```
-
+<img src = "img/17.png" width = 100%>
 
 
 ---
