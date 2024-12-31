@@ -365,3 +365,23 @@ docker push 127.0.0.1:5000/custom-nginx:latest
 
 Переходим в containers, выбираем контейнер с nginx. 
 <img src = "img/24.png" width = 100%>
+
+Удаляем compose.yaml и выполняем команду "docker compose up -d":
+<img src = "img/25.png" width = 100%>
+
+Получаем предупреждение, о том что были обнаружены осиротевшие контейнеры (orphan containers), которые относятся к проекту, но не указаны в текущем Compose-файле. И предлагается выполнить очистку выполнив команду: 
+```
+docker compose up -d --remove-orphans
+```
+
+<img src = "img/26.png" width = 100%>
+
+
+Далее мы можем погасить весь проект целиком:
+```
+docker compose down
+```
+
+<img src = "img/27.png" width = 100%>
+
+
