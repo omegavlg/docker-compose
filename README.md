@@ -340,3 +340,28 @@ services:
 И снова выполняем команду "docker compose up -d"
 
 <img src = "img/20.png" width = 100%>
+
+Выполним серию команд, для того чтобы залить образ custom-nginx, изменить ему тег на latest и залить его в локальный репозиторий.
+```
+docker pull omegavlg/custom-nginx:1.0.0
+```
+```
+docker tag omegavlg/custom-nginx:1.0.0 127.0.0.1:5000/custom-nginx:latest
+```
+```
+docker images
+```
+```
+docker push 127.0.0.1:5000/custom-nginx:latest
+```
+
+<img src = "img/21.png" width = 100%>
+
+Заходим в интерфейс, выполняем первоначальную настройку, и деплоим компоуз:
+
+<img src = "img/22.png" width = 100%>
+
+<img src = "img/23.png" width = 100%>
+
+Переходим в containers, выбираем контейнер с nginx. 
+<img src = "img/24.png" width = 100%>
