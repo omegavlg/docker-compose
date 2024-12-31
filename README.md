@@ -239,6 +239,8 @@ exit
 ```
 echo "File2" > file2.txt
 ```
+<img src = "img/16.png" width = 100%>
+
 ```
 docker exec -it debian-container bash
 ```
