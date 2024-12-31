@@ -230,15 +230,19 @@ docker run -d -v $(pwd):/data --name debian-container -it debian:latest
 ```
 docker exec -it centos-container bash
 ```
+```
 echo "File1" > /data/file1.txt
 exit
 ```
+
 ```
 echo "File2" > file2.txt
 ```
+
 ```
 docker exec -it debian-container bash
 ```
+
 ```
 ls /data
 cat /data/file1.txt
