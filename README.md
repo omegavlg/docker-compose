@@ -227,6 +227,8 @@ docker run -d -v $(pwd):/data --name centos-container -it centos:latest
 ```
 docker run -d -v $(pwd):/data --name debian-container -it debian:latest
 ```
+<img src = "img/15.png" width = 100%>
+
 ```
 docker exec -it centos-container bash
 ```
@@ -234,15 +236,12 @@ docker exec -it centos-container bash
 echo "File1" > /data/file1.txt
 exit
 ```
-
 ```
 echo "File2" > file2.txt
 ```
-
 ```
 docker exec -it debian-container bash
 ```
-
 ```
 ls /data
 cat /data/file1.txt
