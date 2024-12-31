@@ -323,4 +323,20 @@ docker compose up -d
 
 Был запущен файл compose.yaml, так как Docker по умолчанию ищет файл с именем docker-compose.yaml и compose.yaml, но compose.yaml имеет приоритет.
 
+Редактируем compose.yaml, чтобы запустились оба файла:
+```
+version: "3"
 
+include:
+  - docker-compose.yaml
+services:
+  portainer:
+    network_mode: host
+    image: portainer/portainer-ce:latest
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+```
+
+И снова выполняем команду "docker compose up -d"
+
+<img src = "img/20.png" width = 100%>
